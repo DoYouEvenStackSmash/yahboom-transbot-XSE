@@ -1,0 +1,12 @@
+<launch>
+    <!-- Start laser_bringup.launch -->
+    <include file="$(find transbot_nav)/launch/laser_base/laser_bringup.launch"/>
+    <!-- Wait for a few seconds before launching the next node -->
+
+    <!-- Start transbot_navigation.launch -->
+    <include file="$(find transbot_nav)/launch/transbot_map.launch" />
+    <!-- Wait for a few seconds before launching the next node -->
+
+    <!-- Start view_map.launch -->
+    <include file="$(find transbot_nav)/launch/view/view_map.launch" />
+</launch>

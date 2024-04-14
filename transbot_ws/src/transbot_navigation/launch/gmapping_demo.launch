@@ -1,0 +1,14 @@
+<launch>
+
+  <arg name="scan_topic" default="$(eval optenv('TRANSBOT_LASER_TOPIC', 'scan'))" />
+
+  <!--- Run gmapping -->
+  <include file="$(find transbot_navigation)/launch/include/gmapping.launch">
+    <arg name="scan_topic"    value="$(arg scan_topic)" />
+  </include>
+
+
+  <!--- Run Move Base -->
+  <include file="$(find transbot_navigation)/launch/include/move_base.launch" />
+
+</launch>

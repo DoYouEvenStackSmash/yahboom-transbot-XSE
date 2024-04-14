@@ -1,0 +1,6 @@
+[submodule "transbot_ws/src/warehouse_ros"]
+	path = transbot_ws/src/warehouse_ros
+	url = https://github.com/ros-planning/warehouse_ros
+[submodule "transbot_ws/src/world_canvas_msgs"]
+	path = transbot_ws/src/world_canvas_msgs
+	url = https://github.com/corot/world_canvas_msgs

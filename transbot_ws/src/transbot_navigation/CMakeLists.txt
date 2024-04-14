@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(transbot_navigation)
+
+find_package(catkin REQUIRED COMPONENTS roslaunch)
+
+catkin_package()
+
+roslaunch_add_file_check(launch/include/gmapping.launch)
+roslaunch_add_file_check(launch/gmapping_demo.launch)
+roslaunch_add_file_check(launch/include/move_base.launch)
+
+
+install(
+DIRECTORY launch maps params
+DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
